@@ -1,0 +1,1079 @@
+$blue: rgb(77, 154, 255);
+$db: rgb(49, 119, 209);
+$lg: rgb(247, 247, 247);
+$lw: rgba(255, 255, 255, 0.9);
+.background {
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background {
+    background: url(../img/bg.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    // height: 100vh;
+}
+
+.background-black {
+    background: rgba(2, 9, 29, 0.9);
+    height: 30%;
+}
+
+.bgw {
+    background: white;
+}
+.bgg {
+    background: whitesmoke;
+}
+.logo {
+    background: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin: 100px 0 50px 0;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+h3 {
+    font-size: 15px;
+    line-height: 30px;
+    margin: 30px 0;
+}
+.main-text h3 {
+    color: white;
+}
+
+.main-text-btn {
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.hover {
+    background: $blue;
+    border: 2px solid $blue;
+    box-sizing: border-box;
+    color: white;
+    transition: .2s;
+    &:hover {
+        background: transparent;
+        color: $blue;
+    }
+}
+
+.hover-blue {
+    background: $blue;
+    border: 2px solid $blue;
+    box-sizing: border-box;
+    color: white;
+    transition: .2s;
+    &:hover {
+        background: $db;
+        color: white;
+        border: 2px solid $db;
+    }
+}
+.hover-white {
+    background: white;
+    border: 2px solid white;
+    box-sizing: border-box;
+    color: $blue;
+    transition: .2s;
+    &:hover {
+        background: rgb(236, 236, 236);
+        color: $blue;
+        border: 2px solid rgb(236, 236, 236);
+    }
+}
+.transparent {
+    background: transparent;
+    border: 2px solid $blue;
+    color: $blue; 
+    transition: .2s;
+    &:hover {
+        background: $blue;
+        color: white;
+    }
+}
+
+.main-form {
+    background: rgba(121, 121, 121, 0.301);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 30px 30px 10px 30px;
+    margin: 150px 0;
+    position: relative;
+
+}
+.main-form-title {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+.main-form-rules {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+}
+.main-form input {
+    box-sizing: border-box;
+    padding: 20px 20px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+::placeholder { 
+    color: rgb(207, 207, 207);
+}
+
+[type=submit] {
+    cursor: pointer;
+}
+
+header {
+    background: white;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.7);
+    z-index: 99999999999999999999;
+}
+.navigation {
+    display: flex;
+    background: $lw;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-2 {
+    background: url(../img/logo2.png) center center;
+    background-repeat: no-repeat;
+    padding: 100px;
+    background-size: contain;
+}
+.nav-link .active {
+    color: $blue !important;
+}
+.nav-link a {
+    line-height: 60px;
+    position: relative;
+    margin: 0 5px;
+    color: grey;
+    &:before {
+        content: "";
+        position: absolute;
+        transition: .2s;
+        width: 0%;
+        background: $blue;
+        bottom: -5px;
+        height: 1px;
+    }
+    &:hover:before {
+        width: 100%;
+    }
+    &:hover {
+        color: $blue !important;
+
+    }
+}
+
+.about {
+    background: white;
+    min-height: 500px;
+}
+.menu-mobile-btn {
+    border: 1px solid rgb(236, 236, 236);
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: .2s;
+    &:hover {
+        background: $lg;
+    }
+}
+.menu-mobile-btn-stick {
+    width: 30px;
+    height: 2px;
+    background: $lg;
+    margin: 5px 0;
+}
+.menu-mobile {
+    display: none;
+}
+.menu-mobile-field {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.7);
+}
+.menu-mobile-field a {
+    flex-basis: 990px;
+    flex-grow: 1;
+    margin: 10px 0;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.intro-image {
+    background: url(../img/intro-image.jpg) center center / contain no-repeat;
+    height: 300px;
+    position: relative;
+    left: -500px;
+    opacity: 0;
+
+}
+.pb {
+    padding: 60px 0 30px 0;
+}
+
+h2 {
+    // line-height: px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.trips {
+    background: rgb(245, 245, 245);
+    min-height: 700px;
+}
+.tac {
+    text-align: center;
+}
+.feature-img {
+    background: url(../img/feature-image.jpg) center center / contain no-repeat;
+    padding: 180px 0;
+    margin-bottom: 20px;
+}
+.feature-img-2 {
+    background: url(../img/feature2-image.jpg) no-repeat;
+    height: 300px;
+    background-size: cover;
+}
+
+
+.trips-block {
+    display: flex;
+    max-width: 350px;
+    &:hover .fa {
+        color: $blue;
+    }
+}
+.trips-block .fa {
+    font-size: 40px;
+    padding: 0 30px 0 0;
+    transition: .2s;
+
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.jcsb {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+    align-items: center;
+}
+.contact {
+    min-height: 450px;
+    color: white;
+
+}
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+@media (max-width: 990px) {
+    .nav-link {
+        display: none;
+    }
+    .menu-mobile-btn {
+        display: block;
+    }
+}
+
+.contact-text-btn {
+    padding: 20px 50px;
+    &:hover {
+        color: white;
+    }
+}
+.price-text {
+    // position: relative;
+}
+.bluestick {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        bottom: 0;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background: $blue;
+    }
+}
+
+.price-block {
+    width: 100%;
+    margin: 10px;
+    flex-basis: 250px;
+    flex-grow: 2;
+    position: relative;
+    bottom: -600px;
+}
+.card {
+    text-align: center;
+}
+.pbottom {
+    padding-bottom: 60px;
+}
+.ptop {
+    padding-top: 60px;
+}
+.card-price-cost {
+    color: $blue;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+.card-price-start {
+    position: relative;
+    top: -30px;
+}
+.card-btn {
+    padding: 10px 40px;
+}
+
+.clients {
+    background: $lg;
+    min-height: 300px;
+}
+
+.clients-block-logo {
+    padding: 70px;
+    margin: 0 30px;
+}
+.google {
+    background: url(../img/google.png) center center / contain no-repeat;
+}
+.yandex {
+    background: url(../img/yandex.png) center center / contain no-repeat;
+}
+.facebook {
+    background: url(../img/facebook.png) center center / contain no-repeat;
+}
+.amazon {
+    background: url(../img/amazon.png) center center / contain no-repeat;
+}
+.reviews {
+    background: white;
+    min-height: 300px;
+}
+.reviews-block {
+    overflow: hidden;
+    margin: 0 auto;
+}
+.reviews-block-text {
+    font-style: italic;
+}
+.blue-text {
+    color: $blue;
+}
+.reviews-block-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 50px;
+    margin: 20px auto;
+}
+
+.reviews-block .one {
+    background: url(../img/baklanov.jpg);
+    background-size: cover;
+}
+.reviews-block .two{
+    background: url(../img/starik.jpg);
+    background-size: cover;
+}
+.reviews-block .three {
+    background: url(../img/vorobiov.jpg);
+    background-size: cover;
+}
+h6 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.fa-contact {
+    font-size: 30px;
+    padding-right: 20px;
+}
+.fa-contact-block {
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+    margin-left: 40px;
+}
+.fa-contact-block .fa {
+    font-size: 20px;
+    position: absolute;
+    left: -35px;
+    color: $blue;
+}
+
+.contact-link {
+    color: $blue !important;
+    transition: .2s;
+    &:hover {
+        color: white !important;
+    }
+}
+.contact-form input, .contact-form textarea, .auth-form input,.signup-form input {
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+}
+.contact-form input[type = text], [type = password], [type = email], textarea {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.contact-form textarea {
+    min-height: 150px;
+    max-height: 450px;
+}
+.auth-form input[type = text], [type = password], [type = email] {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.signup-form input[type = text], [type = password], [type = email] {
+    box-sizing: border-box;
+    padding: 20px;
+}
+// @media (max-width: 1200px) {
+//     .flex-container {
+//         padding-top: 30px;
+//     }
+// }
+@media (max-width: 768px) {
+    .container {
+        // box-sizing: border-box;
+        padding:0 20px;
+    }
+}
+
+button, textarea, input, a {
+    outline: none !important;
+    user-select: none;
+}
+
+.contact, .trips, .about-block .main  {
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.socials {
+    background: white;
+    min-height: 150px;
+}
+.socials a{
+    font-size: 20px;
+    color: $blue !important;
+}
+.social-circle {
+    border: 1px solid $blue;
+    border-radius: 50px;
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    margin: 0 5px;
+    transition: .2s;
+    &:hover {
+        background: $blue;
+    } 
+    &:hover a {
+        color: white !important;
+        animation: rotate .5s ease-in-out;;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.aic {
+    align-items: center;
+}
+.blick {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // top: 15px;
+    // margin: 0 auto;
+
+}
+
+
+// ANIMATION
+
+.top {
+    top: -200px;
+    opacity: 0;
+    position: relative;
+}
+.left {
+    left: -500px;
+    position: relative;
+    opacity: 0;
+}
+.bottom {
+    bottom: -100px;
+    position: relative;
+    opacity: 0;
+}
+
+.right {
+    right: -500px;
+    position: relative;
+    opacity: 0;
+}
+
+.top1 {
+    top: -200px;
+    opacity: 0;
+    position: relative;
+}
+.left1 {
+    left: -500px;
+    position: relative;
+    opacity: 0;
+}
+.bottom1 {
+    bottom: -100px;
+    position: relative;
+    opacity: 0;
+}
+
+.right1 {
+    right: -500px;
+    position: relative;
+    opacity: 0;
+}
+
+@keyframes trips-one {
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+.trips-one {
+    opacity: 0;
+}
+.trips-one:nth-child(1) {
+    animation: trips-one 1s ease-in-out forwards;
+}
+.trips-one:nth-child(2) {
+    animation: trips-one 1.5s ease-in-out forwards;
+}
+.trips-one:nth-child(3) {
+    animation: trips-one 2s ease-in-out forwards;
+}
+.trips-one:nth-child(4) {
+    animation: trips-one 2.5s ease-in-out forwards;
+}
+// .trips-one {
+//     animation: trips-one 1s infinite ease-in-out;
+// }
+// .trips-one {
+//     animation: trips-one 1s infinite ease-in-out;
+// }
+// .trips-one {
+//     animation: trips-one 1s infinite ease-in-out;
+// }
+
+
+.sss {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.fa-block {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+.trips-area, 
+.feature-img, 
+.trips-text, 
+.feature-img-2, 
+.about-block-text, 
+.contact-text-p, 
+.contact-text-h2, 
+.contact-text-btn, 
+.price-block, 
+.bluestick, 
+.bs-1, 
+.bs-2, 
+.bs-3, 
+.clients-block-logo, 
+.reviews-area,
+.fa-contact-block,
+.contact-text-h6,
+.contact-form-name,
+.contact-form-email,
+.contact-form-message,
+.contact-form-button,
+.contact-form-rules,
+.social-circle,
+.intro-image,
+.about-block-title,
+.about-block-desc,
+.about-block-btn {
+    opacity: 0;
+}
+.right-anim {
+    animation: right 1s ease-in-out forwards;
+}
+.left-anim {
+    animation: left 1s ease-in-out forwards;
+}
+.top-anim {
+    animation: top 1s ease-in-out forwards;
+}
+.bottom-anim {
+    animation: bottom 1s ease-in-out forwards;
+}
+@keyframes left {
+    0% {
+        left: -500px;
+        position: relative;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        left: 0px;
+        opacity: 1;
+    }
+}
+@keyframes top {
+    0% {
+        top: -200px;
+        position: relative;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes bottom {
+    0% {
+        bottom: -100px;
+        position: relative;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+@keyframes right {
+    0% {
+        right: -500px;
+        position: relative;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        right: 0px;
+        opacity: 1;
+    }
+}
+@media (max-width: 411px) {
+    .trips-area, 
+    .feature-img, 
+    .trips-text, 
+    .feature-img-2, 
+    .about-block-text, 
+    .contact-text-p, 
+    .contact-text-h2, 
+    .contact-text-btn, 
+    .price-block, 
+    .bluestick, 
+    .bs-1, 
+    .bs-2, 
+    .bs-3, 
+    .clients-block-logo, 
+    .reviews-area,
+    .fa-contact-block,
+    .contact-text-h6,
+    .contact-form-name,
+    .contact-form-email,
+    .contact-form-message,
+    .contact-form-button,
+    .contact-form-rules,
+    .social-circle, 
+    .intro-image,
+    .about-block-title,
+    .about-block-desc,
+    .about-block-btn {
+        animation: none !important;
+        opacity: 1 !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    
+}
+.errorLabel {
+    width: 100px;
+    height: 20px;
+    border: 1px solid rgb(225, 72, 72);
+    position: absolute;
+    right: -120px;
+    top: 27%;
+}
+.error {
+    border: 1px solid rgb(225, 72, 72) !important;
+}
+.fa-arrow-up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 30px;
+    background: rgba(128, 128, 128, 0.3);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    // transition: .3s;
+    display: none;
+    &:hover {
+        color: $blue;
+        border: 2px solid $blue;
+        background: transparent;
+    }
+}
+
+
+.auth {
+    position: fixed;
+    display: none;
+    background: url(../img/auth.jpg) center center / cover no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999999;
+    .auth-black {
+        // background: rgba(3, 15, 41, 0.925);
+        background: white;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .auth-block{
+            // width: 1000px;
+            min-height: 500px;
+            // background: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            // box-sizing: border-box;
+            // padding: 30px;
+            // .auth-block-bg {
+            //     height: 500px;
+            //     max-width: 400px;
+
+            //     overflow: hidden;
+            //     .auth-block-img {
+            //         background: url(../img/auth.jpg) center left / contain no-repeat;
+            //         min-width: 300px;
+            //         min-height: auto;
+            //         padding: 300px;
+            //         background-size: cover;
+            //         flex-basis: 400px;
+            //         bottom: 0;
+            //         position: relative;
+            //         flex-grow: 1;
+            //     }
+            // }
+            
+            .auth-block-area {
+                background: white;
+                max-width: 600px;
+                box-sizing: border-box;
+                padding: 50px;
+                flex-basis: 200px;
+                flex-grow: 1;
+                position: relative;
+                .auth-block-area-close {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    cursor: pointer;
+                }
+                .auth-block-area-close:before {
+                    content: "";
+                    position: absolute;
+                    width: 20%;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background: $blue;
+                    transition: .2s;
+                }
+                .auth-block-area-close:hover:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                }
+                .signup-btn {
+                    position: relative;
+                    cursor: pointer;
+                }
+                .signup-btn:before {
+                    content: "";
+                    position: absolute;
+                    width: 10%;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background: $blue;
+                    transition: .2s;
+                }
+                .signup-btn:hover:before {
+                    content: "";
+                    position: absolute;
+                    width: 20%;
+                }
+                h4 {
+                    color: $blue;
+                }
+                .authstick {
+                    position: absolute;
+                    width: 200px;
+                    left: 0;
+                    right: 0;
+                    top: 150px;
+                    margin: 0 auto;
+                    height: 10px;
+                    background: $blue;
+                }
+                .auth-form input {
+                    border: 1px solid $blue;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .auth-block-area {
+        background: white;
+        position: fixed !important;
+        top: 0;
+        padding: 10000px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.signup {
+    display: none;
+    position: fixed;
+    z-index: 99999999999;
+
+    .signup-black {
+        background: $blue;
+        transition: .5s;
+        position: fixed;
+        // margin-bottom: 5000px; 
+        display: flex;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        .signup-block{
+            // width: 1000px;
+            min-height: 500px;
+            // background: white;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            // box-sizing: border-box;
+            // padding: 30px;
+            // .auth-block-bg {
+            //     height: 500px;
+            //     max-width: 400px;
+
+            //     overflow: hidden;
+            //     .auth-block-img {
+            //         background: url(../img/auth.jpg) center left / contain no-repeat;
+            //         min-width: 300px;
+            //         min-height: auto;
+            //         padding: 300px;
+            //         background-size: cover;
+            //         flex-basis: 400px;
+            //         bottom: 0;
+            //         position: relative;
+            //         flex-grow: 1;
+            //     }
+            // }
+            
+            .signup-block-area {
+                max-width: 600px;
+                box-sizing: border-box;
+                padding: 50px;
+                flex-basis: 200px;
+                flex-grow: 1;
+                position: relative;
+                .signup-block-area-close {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    color: white;
+                    cursor: pointer;
+                }
+                .signup-block-area-close:before {
+                    content: "";
+                    position: absolute;
+                    width: 20%;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background: white;
+                    transition: .2s;
+                }
+                .signup-block-area-close:hover:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                }
+                .signup {
+                    position: relative;
+                    cursor: pointer;
+                }
+                .signup:before {
+                    content: "";
+                    position: absolute;
+                    width: 10%;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background: $blue;
+                    transition: .2s;
+                }
+                .signup:hover:before {
+                    content: "";
+                    position: absolute;
+                    width: 20%;
+                }
+                h4 {
+                    color: white;
+                }
+                .signupstick {
+                    position: absolute;
+                    width: 200px;
+                    left: 0;
+                    right: 0;
+                    top: 150px;
+                    margin: 0 auto;
+                    height: 10px;
+                    background: white;
+                }
+                .auth-form input {
+                    border: 1px solid white;
+                }
+                .auth-back {
+                    color: white;
+                    position: relative;
+                    cursor: pointer;
+                }
+                .auth-back:before {
+                    content: "";
+                    position: absolute;
+                    width: 10%;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background: white;
+                    transition: .2s;
+                }
+                .auth-back:hover:before {
+                    content: "";
+                    position: absolute;
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+.sign-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}

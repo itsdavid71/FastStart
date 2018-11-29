@@ -1,0 +1,26 @@
+.background {
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.white {
+  background: white;
+  height: 600px;
+}
+
+.cp-background {
+  background-size: 100%;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.cp-background-black {
+  height: 100vh;
+}
+/*# sourceMappingURL=cp.css.map */
